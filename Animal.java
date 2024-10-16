@@ -19,12 +19,6 @@ public abstract class Animal{
    public Animal(String name){
       this.name = name;
    }
-   
-   public void main(String[]args) {
-	   Animal goldy = new Goldfish("Goldy");
-	   goldy.eat();
-	   
-   }
 
    /**
     *Abstract method that should represent a specific sound
@@ -47,21 +41,48 @@ public abstract class Animal{
       System.out.println(this.name + " eats some food.");
    }
 }
-
+/**
+ * A Class that extends the Animal class in order to execute 
+ * abstract methods by over-riding them with public methods. 
+ * @author Kyle Dennewith
+ *
+ */
 class Goldfish extends Animal{
 	public Goldfish(String name) {
 		super(name);
-		// TODO Auto-generated constructor stub
 	}
-
+	
+	/**
+	 * A method that over-rides the Animal method 'sound' to output a string of text
+	 * that sounds like a Goldfish.
+	 */
 	public void sound() {
 	
-		System.out.println(name + " goes \"pawp\"");
+		System.out.println(this.name + " goes \"pawp\"");
 		
 	}
 	
+	/**
+	 * A method that over-rides the Animal method 'play' to output a string of text
+	 * that describes an action taken by the Goldfish.
+	 */
 	public void play() {
 		
-		System.out.println(name + " does a flip out of the water and back in.");
+		System.out.println(this.name + " does a flip out of the water and back in.");
+	}
+}
+
+class Tester {
+
+	public static void main(String[] args) {
+		
+			
+				   Animal goldy = new Goldfish("Goldy");
+				   goldy.eat();
+				   goldy.play();
+				   goldy.sound();
+			   
+		
+
 	}
 }
