@@ -19,7 +19,12 @@ public abstract class Animal{
    public Animal(String name){
       this.name = name;
    }
-
+   
+   public void main(String[]args) {
+	   Animal goldy = new Goldfish("Goldy");
+	   goldy.eat();
+	   
+   }
 
    /**
     *Abstract method that should represent a specific sound
@@ -43,3 +48,20 @@ public abstract class Animal{
    }
 }
 
+class Goldfish extends Animal{
+	public Goldfish(String name) {
+		super(name);
+		// TODO Auto-generated constructor stub
+	}
+
+	public void sound() {
+	
+		System.out.println(name + " goes \"pawp\"");
+		
+	}
+	
+	public void play() {
+		
+		System.out.println(name + " does a flip out of the water and back in.");
+	}
+}
