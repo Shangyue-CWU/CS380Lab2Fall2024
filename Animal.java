@@ -48,14 +48,33 @@ public abstract class Animal{
  *
  */
 class Goldfish extends Animal{
+	
+	/**
+	 * Constructor method for Goldfish objects
+	 * @param name The name of the Goldfish.
+	 */
 	public Goldfish(String name) {
 		super(name);
+	}
+	
+	/**
+	 * Main method to run the program.
+	 * @param args An array of String arguments
+	 */
+	public static void main(String[] args) {
+		
+		   Animal goldy = new Goldfish("Goldy");
+		   goldy.eat();
+		   goldy.play();
+		   goldy.sound();
+	   
 	}
 	
 	/**
 	 * A method that over-rides the Animal method 'sound' to output a string of text
 	 * that sounds like a Goldfish.
 	 */
+	
 	public void sound() {
 	
 		System.out.println(this.name + " goes \"pawp\"");
@@ -70,19 +89,5 @@ class Goldfish extends Animal{
 		
 		System.out.println(this.name + " does a flip out of the water and back in.");
 	}
-}
-
-class Tester {
-
-	public static void main(String[] args) {
-		
-			
-				   Animal goldy = new Goldfish("Goldy");
-				   goldy.eat();
-				   goldy.play();
-				   goldy.sound();
-			   
-		
-
-	}
-}
+	
+}//End of Goldfish Class
