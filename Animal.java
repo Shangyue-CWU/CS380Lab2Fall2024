@@ -42,4 +42,3 @@ public abstract class Animal{
       System.out.println(this.name + " eats some food.");
    }
 }
-
